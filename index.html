@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d24">
+<title>Neha Ishfaq | AI Student & Tech Enthusiast</title>
+<style>
+:root{--bg:#080d24;--panel:rgba(17,25,55,.72);--text:#f4f7ff;--muted:#aab6d5;--cyan:#61e7ff;--purple:#a78bfa;--pink:#ff7bd5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:
+ radial-gradient(circle at 15% 15%,rgba(97,231,255,.13),transparent 28%),
+ radial-gradient(circle at 85% 25%,rgba(167,139,250,.17),transparent 30%),
+ radial-gradient(circle at 60% 90%,rgba(255,123,213,.10),transparent 25%),
+ linear-gradient(135deg,#080d24,#0c1230 55%,#080d24)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.14;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+a{color:inherit;text-decoration:none}
+.container{width:min(1100px,90%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(8,13,36,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:-.5px}.logo span{color:var(--cyan)}
+.nav-links{display:flex;gap:28px;color:var(--muted);font-size:.92rem}.nav-links a:hover{color:var(--cyan)}
+.hero{min-height:85vh;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:55px;padding:70px 0}
+.tag{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(97,231,255,.28);background:rgba(97,231,255,.08);border-radius:30px;color:var(--cyan);font-size:.86rem;margin-bottom:22px}
+.dot{width:7px;height:7px;border-radius:50%;background:#6effb4;box-shadow:0 0 12px #6effb4}
+h1{font-size:clamp(2.8rem,6vw,5.4rem);line-height:1.06;letter-spacing:-3px;margin-bottom:20px}
+.gradient{background:linear-gradient(100deg,var(--cyan),var(--purple),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:610px;margin-bottom:30px}
+.buttons{display:flex;flex-wrap:wrap;gap:14px}
+.btn{padding:13px 22px;border-radius:12px;font-weight:700;display:inline-flex;align-items:center;gap:9px;transition:.25s;border:1px solid rgba(255,255,255,.16)}
+.btn.primary{background:linear-gradient(110deg,#57dfff,#9c8bff);color:#071025;border:0;box-shadow:0 8px 30px rgba(97,231,255,.18)}
+.btn:hover{transform:translateY(-3px)}
+.profile-card{position:relative;max-width:340px;margin:auto;width:100%;padding:28px;border-radius:28px;background:linear-gradient(145deg,rgba(26,38,78,.9),rgba(13,19,46,.85));border:1px solid rgba(255,255,255,.14);box-shadow:0 25px 80px rgba(0,0,0,.3);text-align:center}
+.profile-card:before{content:"";position:absolute;inset:-2px;border-radius:30px;background:linear-gradient(140deg,var(--cyan),transparent 35%,var(--purple));z-index:-1;opacity:.5;filter:blur(12px)}
+.avatar{width:155px;height:155px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;font-size:3.4rem;font-weight:900;letter-spacing:-4px;color:#071025;background:linear-gradient(135deg,var(--cyan),var(--purple),var(--pink));box-shadow:0 0 0 9px rgba(255,255,255,.04),0 0 40px rgba(97,231,255,.2)}
+.profile-card h2{font-size:1.55rem}.profile-card p{color:var(--muted);font-size:.95rem;margin:5px 0 18px}
+.mini-tags{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.mini-tags span{font-size:.78rem;padding:6px 10px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08)}
+section{padding:85px 0}.section-head{text-align:center;margin-bottom:42px}.eyebrow{color:var(--cyan);font-size:.82rem;text-transform:uppercase;letter-spacing:3px;font-weight:800}.section-head h2{font-size:clamp(2rem,4vw,3rem);margin:8px 0}.section-head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:25px;border-radius:20px;background:var(--panel);border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(12px);transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:rgba(97,231,255,.35);box-shadow:0 15px 40px rgba(0,0,0,.2)}
+.icon{font-size:1.7rem;margin-bottom:14px}.card h3{font-size:1.15rem;margin-bottom:8px}.card p{color:var(--muted);font-size:.94rem}
+.timeline{max-width:760px;margin:auto;display:grid;gap:18px}
+.edu{display:grid;grid-template-columns:95px 1fr;gap:20px;align-items:start}
+.year{color:var(--cyan);font-weight:800;padding-top:4px}
+.edu-card{padding:23px;border-left:3px solid var(--purple);border-radius:0 16px 16px 0;background:var(--panel);border-top:1px solid rgba(255,255,255,.08);border-right:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.edu-card h3{margin-bottom:4px}.edu-card p{color:var(--muted)}.score{display:inline-block;margin-top:10px;color:#071025;background:linear-gradient(100deg,var(--cyan),var(--purple));padding:5px 10px;border-radius:8px;font-weight:800;font-size:.85rem}
+.skills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:850px;margin:auto}
+.skill{padding:12px 18px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#e9edff}.skill b{color:var(--cyan);margin-right:7px}
+.contact-box{text-align:center;max-width:750px;margin:auto;padding:40px;border-radius:25px;background:linear-gradient(135deg,rgba(97,231,255,.09),rgba(167,139,250,.12));border:1px solid rgba(255,255,255,.12)}
+.contact-box p{color:var(--muted);margin:12px 0 24px}
+footer{text-align:center;padding:25px;color:#8390b4;border-top:1px solid rgba(255,255,255,.08);font-size:.88rem}
+@media(max-width:780px){.hero{grid-template-columns:1fr;text-align:center;gap:35px;padding-top:55px}.hero p{margin-left:auto;margin-right:auto}.buttons{justify-content:center}.profile-card{max-width:300px}.grid{grid-template-columns:1fr}.nav-links{gap:12px;font-size:.78rem}.logo{font-size:1rem}.nav-inner{height:65px}h1{letter-spacing:-1.5px}.edu{grid-template-columns:1fr;gap:5px}.year{padding-left:4px}}
+@media(max-width:430px){.nav-links a:nth-child(2){display:none}.nav-links{gap:10px}.contact-box{padding:25px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav-inner">
+<a class="logo" href="#home">NEHA<span>.</span></a>
+<div class="nav-links"><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+</div></nav>
+<main>
+<div class="container hero" id="home">
+<div>
+<div class="tag"><span class="dot"></span> BS Artificial Intelligence Student · BZU</div>
+<h1>Hi, I'm <span class="gradient">Neha Ishfaq</span></h1>
+<p>A curious learner, aspiring AI engineer, and technology enthusiast. I'm exploring the exciting world of Artificial Intelligence, programming, and digital creativity—one step at a time.</p>
+<div class="buttons"><a class="btn primary" href="#about">Explore my portfolio ↗</a><a class="btn" href="#education">My education ↓</a></div>
+</div>
+<div class="profile-card">
+<div class="avatar">NI</div>
+<h2>Neha Ishfaq</h2>
+<p>Future AI Engineer ✦ Tech Enthusiast</p>
+<div class="mini-tags"><span>Artificial Intelligence</span><span>C++</span><span>PowerPoint</span></div>
+</div>
+</div>
+
+<section id="about"><div class="container">
+<div class="section-head"><div class="eyebrow">A little about me</div><h2>Learning today. <span class="gradient">Building tomorrow.</span></h2><p>Driven by curiosity and a passion for technology.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🤖</div><h3>AI Student</h3><p>Currently pursuing a BS in Artificial Intelligence at Bahauddin Zakariya University (BZU), Multan.</p></div>
+<div class="card"><div class="icon">💻</div><h3>Programming</h3><p>Learning C++ and developing my programming fundamentals, problem-solving, and logical thinking.</p></div>
+<div class="card"><div class="icon">🎨</div><h3>Digital Creativity</h3><p>Comfortable with Microsoft PowerPoint and creating presentations that communicate ideas clearly.</p></div>
+</div>
+</div></section>
+
+<section id="education"><div class="container">
+<div class="section-head"><div class="eyebrow">Academic journey</div><h2>Education & <span class="gradient">Achievements</span></h2><p>My academic foundation and the journey that brought me here.</p></div>
+<div class="timeline">
+<div class="edu"><div class="year">Present</div><div class="edu-card"><h3>BS Artificial Intelligence</h3><p>Bahauddin Zakariya University (BZU)</p><p>Exploring AI, computing, and the technologies shaping the future.</p><span class="score">Undergraduate · BS AI</span></div></div>
+<div class="edu"><div class="year">Intermediate</div><div class="edu-card"><h3>Ameer Ul Abideen College</h3><p>Completed Intermediate education with a strong academic result.</p><span class="score">1077 / 1200 marks · 89.75%</span></div></div>
+<div class="edu"><div class="year">Matriculation</div><div class="edu-card"><h3>Al Haseeb Public School</h3><p>Built my academic foundation and developed a passion for learning.</p><span class="score">1124 / 1200 marks · 93.67%</span></div></div>
+</div>
+</div></section>
+
+<section id="skills"><div class="container">
+<div class="section-head"><div class="eyebrow">What I'm learning & using</div><h2>My <span class="gradient">Skills</span></h2><p>Growing my toolkit with every new challenge.</p></div>
+<div class="skills"><span class="skill"><b>✦</b> C++ Programming</span><span class="skill"><b>✦</b> Microsoft PowerPoint</span><span class="skill"><b>✦</b> AI & Technology</span><span class="skill"><b>✦</b> Presentation Design</span><span class="skill"><b>✦</b> Logical Thinking</span><span class="skill"><b>✦</b> Continuous Learning</span></div>
+</div></section>
+
+<section id="contact"><div class="container">
+<div class="contact-box"><div class="eyebrow">Let's connect</div><h2>Ideas grow when we <span class="gradient">share them.</span></h2><p>I'm always interested in learning about technology, connecting with fellow students, and exploring new opportunities.</p><a class="btn primary" href="https://www.linkedin.com/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+</div></section>
+</main>
+<footer>Designed with curiosity & code · © <span id="year"></span> Neha Ishfaq</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
